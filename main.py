@@ -45,12 +45,3 @@ def remove():
 
 if __name__ == "__main__":
     app.run(debug=True)
-
-    """
-        Stay healthy 😎 
-        Upgrade Todo List and add more features 🐱‍💻 
-        Study for Final Exam 
-        Fix Remove button placement 
-        Consume Vitamin C 🍊 
-        Complete Biology SE Project by tomorrow night! 
-    """
