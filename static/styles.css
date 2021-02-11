@@ -53,12 +53,13 @@ h3 {
 }
 
 .todo-item {
- margin-left: 1rem;   
+ margin-left: 1rem;
+ margin-top: 5px;   
 }
 
 .remove {
     position: absolute;
-    margin-top: 1.5rem;
+    margin-top: 0.1rem;
     left: 112rem;
     background-color: white;
     border: 1px solid black;
@@ -81,4 +82,10 @@ hr {
 
 .empty-message {
     margin-left: 38rem;
+}
+
+.date {
+    margin: 0;
+    position: relative;
+    margin-left: 1rem;
 }

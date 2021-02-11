@@ -22,6 +22,7 @@
             {% for todo in todos %}
                 <div class="todo">
                     <form action="/remove" method="POST">
+                        <p class="date">{{ todo.date }}, {{ todo.time }}</p>
                         <h3 class="todo-item">{{ todo.todo }}</h3>
                         <input type="text" value="{{ todo.todo }}" name="todo" class="todo-value">
                         <button class="remove" type="submit">✔</button>
