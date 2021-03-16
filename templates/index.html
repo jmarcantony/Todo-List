@@ -10,11 +10,11 @@
 <!-- Main Content -->
 {% block content %}
     <nav class="navbar nav">
-        <h1 class="navbar-brand title">Todo List</h1>
+        <h1 class="navbar-brand title" onClick="reload()">Todo List</h1>
     </nav>
     <hr>
     <form action="/add" method="POST">
-        <input type="text" name="todo" class="add-todo" placeholder="Add Todo" required autocomplete="off">
+        <input type="text" name="todo" class="add-todo" placeholder="Add Todo" required autocomplete="off" maxlength="55">
         <button type="submit" class="add-todo-button">+</button>
     </form>
     <div class="todo-box">
@@ -23,14 +23,22 @@
                 <div class="todo">
                     <form action="/remove" method="POST">
                         <p class="date">{{ todo.date }}, {{ todo.time }}</p>
+                        <button class="remove" type="submit">✔</button>
                         <h3 class="todo-item">{{ todo.todo }}</h3>
                         <input type="text" value="{{ todo.todo }}" name="todo" class="todo-value">
-                        <button class="remove" type="submit">✔</button>
                     </form>
                 </div>
             {% endfor %}
         {% else: %}
-            <h3 class="empty-message">Todo List is Empty!</h3>
+                    <center>
+                        <h3>Todo List is Empty!</h3>
+                    </center>
         {% endif %}
         </div>
+    <script type="text/javascript">
+        function reload() {
+            window.location.href = "{{ url_for('home') }}";
+        }
+        // alert(window.innerWidth)
+    </script>
 {% endblock %}

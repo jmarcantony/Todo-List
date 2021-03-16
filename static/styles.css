@@ -15,6 +15,11 @@
     margin-left: 1rem;
 }
 
+.title:hover {
+    cursor:pointer;
+}
+
+
 h3 {
     display: inline-block;
 }
@@ -25,12 +30,13 @@ h3 {
     margin-left: calc(1/2 * 25vw);
     margin-top: 5rem;
     padding: 2rem;
+    margin-bottom: 5rem;
 }
 
 .todo {
     border: 2px solid black;
     margin: 1rem;
-    padding: 0.5rem;
+    padding: 0.9rem;
 }
 
 .add-todo {
@@ -54,13 +60,14 @@ h3 {
 
 .todo-item {
  margin-left: 1rem;
- margin-top: 5px;   
+ margin-top: 5px;
+ margin-right: 0.5rem; 
 }
 
 .remove {
     position: absolute;
     margin-top: 0.1rem;
-    left: 112rem;
+    left: 82vw;
     background-color: white;
     border: 1px solid black;
     height: 3rem;
@@ -80,12 +87,38 @@ hr {
     height: 0;
 }
 
-.empty-message {
-    margin-left: 38rem;
-}
-
 .date {
     margin: 0;
-    position: relative;
+    /* position: relative; */
     margin-left: 1rem;
+    width: fit-content;
 }
+
+.all-todos {
+    border: 2px solid black;
+    padding: 2rem;
+    width: calc(75/100 * 100vw);
+    margin-left: calc(1/2 * 25vw);
+    margin-top: 3rem;
+    margin-bottom: 4rem;
+}
+
+.user {
+    border: 2px solid black;
+    padding: 1rem;
+    margin: 5rem;
+}
+
+li {
+    list-style-type: none;
+    margin-left: 3rem;
+}
+
+@media (max-width: 800px) {
+    .remove {
+        margin: 0.1vw;
+        left: 74vw;
+    }
+}
+
+

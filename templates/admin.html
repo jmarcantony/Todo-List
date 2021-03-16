@@ -1,0 +1,22 @@
+{% extends "bootstrap/base.html" %}
+{% block title %} Admin Panel {% endblock %} 
+{% block styles %}
+    {{ super() }}
+    <link rel="stylesheet" href="{{ url_for('static', filename="styles.css") }}">
+{% endblock %}
+
+{% block content %}
+    <h1>Welcome to the admin panel, Joseph! 😄</h1>
+    <div class="all-todos">
+	    {% for ip in todos %}
+	    	<div class="user">
+	    		<h1>Todos of {{ ip }}:</h1>
+	    		{% for todo in todos[ip] %}
+		    		<ul>
+		    			<li>{{ todo }}</li>
+		    		</ul>
+		    	{% endfor %}
+	    	</div>
+	    {% endfor %}
+	</div>
+{% endblock %}
